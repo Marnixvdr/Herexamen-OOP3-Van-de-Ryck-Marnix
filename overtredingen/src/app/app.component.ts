@@ -10,10 +10,11 @@ import { Data } from '@angular/router';
 export class AppComponent {
 
 
-  startDate;
-  endDate;
-  today = Date.now();
+  locatie;
+  datum;
+  overtredingReq;
 
+ 
   OvertredingList: Array<Data> = [];
 
   constructor(
@@ -21,10 +22,12 @@ export class AppComponent {
   ) { }
 
   getOvertreding() {
-    if (this.startDate && this.endDate) {
-      console.log(this.startDate)
-      console.log(this.OvertService.getOvertredingPlaats)}
-
+    if (this.datum) {
+      console.log(this.datum)
+      console.log(this.OvertService.getOvertredingPlaats(new String(this.locatie)))
+      this.OvertredingList = this.OvertService.getOvertredingPlaats(new String(this.locatie))
+    
+    }
 }
 }
 

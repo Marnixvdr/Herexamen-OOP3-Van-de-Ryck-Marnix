@@ -1,32 +1,31 @@
 
 <div>
-  <h1>Overtredingen</h1>
+  <h1>Marnix Van de Ryck</h1>
   <h2>Zoek op locatie</h2>
   <div>
-    <input type="text" [(ngModel)]="overtredingReq"><br><br>
-    <input type="submit" value="Find" (click)="findOvertredingPlaats()"><br><br>
+    <input type="text" ><br><br>
+    <input type="submit" value="Find" (click)="foundOvertreding()"><br><br>
     <h2 *ngIf="foundOvertreding">
-      datum: {{foundOvertreding.datum_vaststelling}}
+      datum: {{foundOvertreding.datum_vaststelling}}<br>
       plaats: {{foundOvertreding.opnameplaats_straat}}<br>
       snelheid: {{foundOvertreding.aantal_overtredingen_snelheid}}<br>
       roodlight: {{foundOvertreding.aantal_overtredingen_roodlicht}}<br>
     </h2>
-  </div>
-  //'datum_vaststelling', 'opnameplaats_straat', 'aantal_overtredingen_snelheid' en 'aantal_overtredingen_roodlicht'.
-  
+  </div>  
 
   <h2>Zoek op datum</h2>
   <div>
-    datum: <input type="date" [(ngModel)]="datum_vaststelling"><br>
+    datum: <input type="date" ><br>
     <input type="submit" value="Get" (click)="getOvertredingDatum()"><br><br>
 
     <div *ngFor="let item of OvertList;">
        <br />
-       datum: {{foundOvertreding.datum_vaststelling}}
+       <h3>
+       datum: {{foundOvertreding.datum_vaststelling}}<br>
        plaats: {{foundOvertreding.opnameplaats_straat}}<br>
        snelheid: {{foundOvertreding.aantal_overtredingen_snelheid}}<br>
        roodlight: {{foundOvertreding.aantal_overtredingen_roodlicht}}<br>
-     </h2>
+      </h3>
   </div>
 
 
