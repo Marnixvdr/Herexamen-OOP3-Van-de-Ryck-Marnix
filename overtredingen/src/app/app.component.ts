@@ -7,6 +7,7 @@ import { Data } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
 
@@ -24,10 +25,11 @@ export class AppComponent {
   getOvertreding() {
     if (this.datum) {
       console.log(this.datum)
-      console.log(this.OvertService.getOvertredingPlaats(new String(this.locatie)))
-      this.OvertredingList = this.OvertService.getOvertredingPlaats(new String(this.locatie))
+      console.log(this.OvertService.getOvertredingPlaats())
+      this.OvertredingList = this.OvertService.getOvertredingPlaats()
     
     }
 }
+
 }
 

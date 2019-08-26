@@ -1,10 +1,11 @@
 
+
 <div>
   <h1>Marnix Van de Ryck</h1>
   <h2>Zoek op locatie</h2>
   <div>
     <input type="text" ><br><br>
-    <input type="submit" value="Find" (click)="foundOvertreding()"><br><br>
+    <input type="button" value="Zoek" (click)=getOvertredingDatum() ><br><br>
     <h2 *ngIf="foundOvertreding">
       datum: {{foundOvertreding.datum_vaststelling}}<br>
       plaats: {{foundOvertreding.opnameplaats_straat}}<br>
@@ -13,9 +14,9 @@
     </h2>
   </div>  
 
-  <h2>Zoek op datum</h2>
+  <h2>Zoek op snelheid</h2>
   <div>
-    datum: <input type="date" ><br>
+    <input type="int" ><br>
     <input type="submit" value="Get" (click)="getOvertredingDatum()"><br><br>
 
     <div *ngFor="let item of OvertList;">
